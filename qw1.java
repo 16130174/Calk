@@ -1,53 +1,53 @@
-package Base;
+package Kalc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel; 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.*;
-  
+ 
 public class qw1 extends JFrame {
 	 JFrame panel = new JFrame();
    public qw1() { 
-      initComponents();
+      initComponents(); 
    }
    public JFrame viewForm;
-    public static User CurrentUser;
  
    private void initComponents() {
-	
-      viewForm = new JFrame("Меню"); //Задаем название формы
-      viewForm.setTitle("\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F"); //Устанавливаем заголовок формы
-      viewForm.setSize(480, 200); //Задаем размеры формы
-      viewForm.setVisible(true); //Делаем форму видимой 
-      viewForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Определяем действие, которое необходимо выполнить при "выходе из программы"
+	 
+      viewForm = new JFrame("");
+      viewForm.setTitle("\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F");
+      viewForm.setSize(480, 200);
+      viewForm.setVisible(true);
+      viewForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       
  
-      JButton button = new JButton("Работник банка"); //Задаем название кнопки
-      button.setVisible(true); //Делеаем кнопку видимой
-      button.setLocation(10, 58); //Задаем расположение кнопки
-      button.setSize(215, 50); //Задаем размеры кнопки
-      button.addActionListener(new ActionListener() { //Добавляем на кнопку слушателя
+      JButton button = new JButton("�������� �����");
+      button.setVisible(true);
+      button.setLocation(10, 58);
+      button.setSize(215, 50);
+      button.addActionListener(new ActionListener() {
     	  
          public void actionPerformed(ActionEvent e) {
-
-             panel.dispose(); //Закрываем форму Меню
-             new log().show(); //Открываем форму авторизации    
+        	 
+             panel.dispose();
+             new qw_().show();
+             
      }
-  
+ 
       });
-      JButton button2 = new JButton("Клиент банка"); // Задаем название кнопки
-      button2.setVisible(true); //Делеаем кнопку видимой
-      button2.setLocation(239, 58); //Задаем расположение кнопки
-      button2.setSize(215, 50); //Задаем размеры кнопки
-      button2.addActionListener(new ActionListener() { //Добавляем на кнопку слушателя
+      JButton button2 = new JButton("������ �����");
+      button2.setVisible(true);
+      button2.setLocation(239, 58);
+      button2.setSize(215, 50);
+      button2.addActionListener(new ActionListener() {
 
 		public void actionPerformed(ActionEvent e) {
 		
-			 panel.dispose(); //Закрываем форму Меню
-			 new Klient().show(); //Открываем форму авторизации
+			 panel.dispose();
+			 new Klient().show();
 		}
  
         
